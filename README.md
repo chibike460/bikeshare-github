@@ -8,7 +8,10 @@ Bikeshare Github Project
 Describe what your project is about and what it does
 
 ### Files used
-Include the files used
+These files, aside the "bikeshares.py" file are behind the working mechanism of this Project:
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://confluence.atlassian.com/stashkb/how-do-you-make-changes-on-a-specific-commit-747831891.html
