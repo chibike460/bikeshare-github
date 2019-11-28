@@ -19,7 +19,7 @@ def get_filters():
         (str) day - name of the day of week to filter by e.g: Friday, or "all" to apply no/
         day filter
     """
-	
+
 	print('Hello! Let\'s explore some US bikeshare data!')
 	# get user input for city (chicago,  new york city, washington). HINT: Use a while loop to handle invalid inputs
 
@@ -63,7 +63,7 @@ def load_data(city, month, day):
 
 	#Create new column of DOW - Day of week and Month, by extracting Month and DOW from Start Time
 	df['month'] = df['Start Time'].dt.month
-	df['day_of_week'] = df['Start Time'].dt.day_name()
+	df['day_of_week'] = df['Start Time'].dt.weekday_name
 
 	#Filtering by month if applicable!
 	if month != 'all':
@@ -79,7 +79,7 @@ def load_data(city, month, day):
 
 	return df
 
-def clean_column_headings(df):
+def clean_headings(df):
     """This function cleans the column heads for an efficient code run"""
 
     ##clean up column headings
@@ -132,7 +132,7 @@ def station_stats(df):
     print('\nThe most frequent start and end station combo is: ')
 
     df['start_end_station'] = 'From ' + df['start_station'] + ' to ' + df['end_station']
-    print(df.start_end_station.mode().iloc[0])
+    print(df['start_end_station'].mode().iloc[0])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('_'*40)
@@ -206,7 +206,7 @@ def main():
 		df = load_data(city, month, day)
 
 		if city == 'washington':
-			clean_column_headings(df)
+			clean_headings(df)
 			time_stats(df)
 			station_stats(df)
 			print("\nNo user stats are available for Washington")
@@ -214,7 +214,7 @@ def main():
 			raw_data(df)
 
 		else:
-			clean_column_headings(df)
+			clean_headings(df)
 			time_stats(df)
 			station_stats(df)
 			trip_duration_stats(df)
