@@ -19,6 +19,11 @@ this project, Git made changes, (little or much) seem so seamless and convenient
 Git is one of the world's most popular version control tool, and I must confess,
 it was fun working with her.
 
+### List of what software, firmware and hardware you may require.
+bikeshares.py runs seamlessly on python version 3.0 and above.
+You'd require Atom, Anaconda3 2019 and Git-2.24.0.2.
+I worked on this project from a windows 10 OS, and I'd recommend it if you're a
+windows user. Aside that, the latest MacOS should do just fine.
 
 ### Files used
 These files, aside the "bikeshares.py" file are behind the working mechanism of
