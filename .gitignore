@@ -1,0 +1,4 @@
+# These are the files that shouldn't be tracked.
+washington.csv
+chicago.csv
+new_york_city.csv
