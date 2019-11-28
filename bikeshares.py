@@ -77,7 +77,7 @@ def load_data(city, month, day):
 
 	return df
 
-def clean_column_headings(df):
+def clean_headings(df):
     """This function cleans the column heads for an efficient code run"""
 
     ##clean up column headings
@@ -204,7 +204,7 @@ def main():
 		df = load_data(city, month, day)
 
 		if city == 'washington':
-			clean_column_headings(df)
+			clean_headings(df)
 			time_stats(df)
 			station_stats(df)
 			print("\nNo user stats are available for Washington")
@@ -212,7 +212,7 @@ def main():
 			raw_data(df)
 
 		else:
-			clean_column_headings(df)
+			clean_headings(df)
 			time_stats(df)
 			station_stats(df)
 			trip_duration_stats(df)
