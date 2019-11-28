@@ -130,7 +130,7 @@ def station_stats(df):
     print('\nThe most frequent start and end station combo is: ')
 
     df['start_end_station'] = 'From ' + df['start_station'] + ' to ' + df['end_station']
-    print(df.start_end_station.mode().iloc[0])
+    print(df['start_end_station'].mode().iloc[0])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('_'*40)
